@@ -17,7 +17,6 @@ export class AppComponent implements OnInit{
     //this.renderer.setStyle(document.documentElement, 'flex', '1');
     this.renderer.setStyle(document.documentElement, 'min-height', '100%');
 
-    this.renderer.setStyle(document.body, 'background-color', 'grey');
 
     this.renderer.setStyle(document.body, 'margin', '0');
     this.renderer.setStyle(document.body, 'display', 'flex');

@@ -1,10 +1,15 @@
 <div>
     <h2 class="coffee-menu-title">OUR SPECIAL COFFEE</h2>
     <div class="coffee-cards">
-      <div *ngFor="let coffee of coffeeArray">
-        <app-coffee-card [coffee]="coffee" ></app-coffee-card>
-      </div>
+      <app-coffee-card *ngFor="let coffee of coffeeArray" [coffee]="coffee"></app-coffee-card>
+    </div>
+    
+
+    <h2 class="dessert-menu-title">OUR SPECIAL DESSERT</h2>
+    <div class="dessert-cards">
+      <app-dessert-card *ngFor="let dessert of dessertArray" [dessert]="dessert"></app-dessert-card>
     </div>
     
 </div>
-  
+
+

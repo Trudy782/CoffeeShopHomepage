@@ -1,0 +1,10 @@
+<div class="dessert-card">
+    <img [src]="dessert.image" alt="image" class="dessert-image">
+    <h3 class="dessert-title">{{ dessert.title }}</h3>
+    <p class="dessert-description">{{dessert.description}}</p>
+    <div class="dessert-order">
+        <p class="dessert-price">{{dessert.price}}</p>
+        <button (click)="orderDessert()">Order Now</button>
+    </div>
+    
+</div>

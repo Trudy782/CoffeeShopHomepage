@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Coffee } from 'src/app/coffee/coffee';
+import { CoffeeService } from 'src/app/coffee/coffee.service';
 
 @Component({
   selector: 'app-coffee-card',
@@ -8,10 +9,11 @@ import { Coffee } from 'src/app/coffee/coffee';
 })
 export class CoffeeCardComponent {
   @Input()coffee!: Coffee;
+  @Output() onOrder=new EventEmitter<Coffee>();
 
-  constructor(){}
+  constructor(private coffeeService:CoffeeService){}
 
   orderCoffee():void{
-    console.log(this.coffee);
+    this.coffeeService.orderCoffee(this.coffee);
   }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Coffee } from '../coffee/coffee';
 import { CoffeeService } from '../coffee/coffee.service';
+import { Dessert } from '../dessert/dessert';
+import { DessertService } from '../dessert/dessert.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,12 +11,12 @@ import { CoffeeService } from '../coffee/coffee.service';
 })
 export class MenuComponent implements OnInit{
   coffeeArray: Coffee[] = [];
+  dessertArray: Dessert[] =[];
 
-  constructor(private coffeeService: CoffeeService) { }
+  constructor(private coffeeService: CoffeeService,private dessertService: DessertService) { }
 
   ngOnInit(): void {
     this.coffeeArray = this.coffeeService.coffeeArray;
-    console.log(this.coffeeArray);
-
+    this.dessertArray = this.dessertService.dessertArray;
   }
 }

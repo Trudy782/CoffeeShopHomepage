@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Coffee } from './coffee';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -32,12 +33,19 @@ export class CoffeeService {
       price:'$12'
     },
   ]
+
+  private gameSubject:Subject<Coffee>=new Subject<Coffee>();
+  gameSubject$=this.gameSubject.asObservable();
+  
   constructor() { }
 
-  // searchGame(text:string)
+  orderCoffee(coffee:Coffee){
+    this.gameSubject.next(coffee);
+  }
 
-  // {
-  //   const filtered = this.gameArray.filter((element:Game) => {return element.title.toLowerCase().includes(text.toLowerCase())});
-  //   console.log(filtered);
-  // }
+  searchGame(text:string)
+  {
+    const filtered = this.coffeeArray.filter((element:Coffee) => {return element.title.toLowerCase().includes(text.toLowerCase())});
+    console.log(filtered);
+  }
 }

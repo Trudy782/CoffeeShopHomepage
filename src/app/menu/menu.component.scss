@@ -1,18 +1,25 @@
 div{
-    background-color: rgb(204, 159, 62);
     min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(236, 224, 211);
 }
 
-.coffee-menu-title{
-    
-}
 
 .coffee-cards{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 2rem;
+    margin-bottom: 3%;
+}
+
+.dessert-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 3%;
+    
 }
