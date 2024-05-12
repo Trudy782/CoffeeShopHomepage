@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Coffee } from 'src/app/coffee/coffee';
 
 @Component({
   selector: 'app-coffee-card',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./coffee-card.component.scss']
 })
 export class CoffeeCardComponent {
+  @Input()coffee!: Coffee;
 
+  constructor(){}
+
+  orderCoffee():void{
+    console.log(this.coffee);
+  }
 }

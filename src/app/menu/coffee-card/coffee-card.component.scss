@@ -1,0 +1,39 @@
+.coffee-card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px;
+    width: 230px;
+    height: 500px;
+  }
+  
+  .coffee-image {
+    width: 100%;
+    border-radius: 12px;
+    height: 300px;
+  }
+
+  .coffee-order{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+  }
+
+  .coffee-description{
+    height: 80px;
+  }
+  button{
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+    width: 90px;
+    align-self: center;
+  }
+  .coffee-price{
+    align-self: center;
+
+  }
+
+  
+
+
+  
